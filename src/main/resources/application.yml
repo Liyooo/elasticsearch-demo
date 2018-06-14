@@ -1,0 +1,15 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9200,127.0.0.1:9201
+      cluster-name: elasticsearch
+  kafka:
+    bootstrap-servers: localhost:9092, localhost:9093, localhost:9094
+    producer:
+      value-serializer: com.example.data.elasticsearch.kafka.KafkaSerializer
+kafka:
+  topic:
+    elasticsearch: example.Data.Elasticsearch
+    elasticsearch-save: example.Data.Elasticsearch.Save
+    elasticsearch-delete: example.Data.Elasticsearch.Delete
+    elasticsearch-update: example.Data.Elasticsearch.Update
